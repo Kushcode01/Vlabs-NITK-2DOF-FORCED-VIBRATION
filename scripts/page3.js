@@ -1,4 +1,4 @@
-function runPage2() {
+function runPage3() {
     background(255);
     image(bg, 0, 0);
     
@@ -20,19 +20,18 @@ function runPage2() {
     text('w2 = ' + spring1.w2.toFixed(4) + " rad/s", 430, 520);
     text('w/w2 = ' + (spring1.w/spring1.w2).toFixed(4) + " rad/s", 310, 480)
     
-    text('X1/Xst = ' + (abs(spring1.x1/(spring1.F0/spring1.k1))).toFixed(4) , 150, 480)
-    text('X1 = ' + (abs(spring1.x1)).toFixed(4) , 150, 520)
+    text('X2/Xst = ' + (abs(spring1.x2/(spring1.F0/spring1.k1))).toFixed(4) , 150, 480)
+    text('X2 = ' + (abs(spring1.x2)).toFixed(4) , 150, 520)
     text('Xst = ' + ((spring1.F0/spring1.k1)).toFixed(4) , 150, 560)
-
     spring1.initialise(F0.inp,w.inp,k1.inp,m1.inp,k2.inp,m2.inp);
-    spring1.update(t,factor)
+    spring1.update(t, factor);
     spring1.show(0, 1, 0);
-    magFac1.initialise();
-    magFac1.draw();
+
+    magFac2.initialise();
+    magFac2.draw();
     
 
-    button3.draw()
-    button4.draw()
+    button5.draw()
 
     F0.draw();
     w.draw();
@@ -41,7 +40,6 @@ function runPage2() {
     m1.draw();
     k2.draw();
     m2.draw();
-
     t = t+dt;
     //clear.mousePressed(clearMe);
 }

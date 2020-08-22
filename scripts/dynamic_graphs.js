@@ -16,13 +16,16 @@ class DynamicGraph  {
     }
 
     initialise()    {
+        if (this.graphs.length>1){
+            this.graphs.splice(0,1);
+        }
         let temp = [];
         for (let x = 0; x < this.w; x+=1)   {
-            let tempx = map(x, 0, this.w, this.minX, this.maxX);
-            let y = map(this.function(tempx, spring1), this.minY, this.maxY, 0, this.h);
+            let tempx = map(x,0, this.w,this.minX, this.maxX) ;
+            let y = this.function(tempx, spring1);
             temp.push([x, y])
         }
-        temp.label = [random(255), random(255), random(255)];
+        temp.label = [255,0,0];
         this.graphs.push(temp);
     }
 

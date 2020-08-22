@@ -50,9 +50,8 @@ class System  {
         //this.fi = atan((-2*this.z*this.w / this.wn) / (1 - (this.w*this.w)/(this.wn*this.wn)));
         
         
-        this.y1 = -(_mulfact*this.x1 * Math.sin(this.w1*t));
-        this.y2 = -(_mulfact*this.x2 * Math.sin(this.w2*t));
-        this.x = 0
+        this.y1 = -(_mulfact*this.x1 * Math.sin(this.w1*t*10));
+        this.y2 = -(_mulfact*this.x2 * Math.sin(this.w2*t*10));
     }
 
     show(_stroke, _strockweight, _fill) {
@@ -88,14 +87,37 @@ class System  {
         pop();
     }
 
-    static mag_func(x, obj)  {
+    static mag_func1(x, obj)  {
         let mu = obj.m1/obj.m2;
-        let temp1 = Math.pow((obj.w/string1.w2),2);
-        let temp2 = Math.pow((obj.w/string1.w1),2);
+        let temp1 = x;
+        let temp2 = Math.pow((obj.w/obj.w1),2);
         let denom = ((1+mu)*temp2) +temp1;
         
         let solution = (1-temp1) / ((temp1*temp2)-denom+1)
-        return (solution );
+        if (abs(solution)<200){
+            return(abs(solution));
+        }
+        else{
+            return (200);
+        }
+        
+    }
+    static mag_func2(x, obj)  {
+        let mu = obj.m1/obj.m2;
+        let temp1 = x;
+        let temp2 = Math.pow((obj.w/obj.w1),2);
+        let denom = ((1+mu)*temp2) +temp1;
+        
+        let solution = (1)/ ((temp1*temp2)-denom+1);
+        if (abs(solution)<200){
+            return(abs(solution));
+        }
+        else {
+            return (200);
+        }
+        
+        
+        
     }
 
     

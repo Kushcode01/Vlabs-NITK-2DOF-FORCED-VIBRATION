@@ -17,6 +17,11 @@ class Graph {
             t = 0.05;
         }
     }
+    
+    delete () {
+        this.wave = [];
+        t=0.05;
+    }
 
     draw(r, g, b)  {
         push();

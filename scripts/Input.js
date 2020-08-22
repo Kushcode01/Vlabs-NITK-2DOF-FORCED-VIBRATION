@@ -41,6 +41,8 @@ class NumberInput {
         this.initialise();
 
         if (this.inp != this.input1.value()) {
+            position_graph1.delete();
+            position_graph2.delete();
             this.inp = this.input1.value();
             if (this.ifSlider) {
                 this.input2.value(this.inp);
@@ -48,7 +50,10 @@ class NumberInput {
         }
 
         if (this.ifSlider) {
+            
             if (this.inp != this.input2.value()) {
+                position_graph1.delete();
+                position_graph2.delete();
                 this.inp = this.input2.value();
                 this.input1.value(this.inp);
             }
