@@ -1,4 +1,4 @@
-# Rotating-Unbalance-VLABS-
+# 2DOF_FORCED_VIBRATIONS-VLABS-
 
 Link:
-https://abhilol123.github.io/Rotating-Unbalance-VLABS-/
+ https://kushcode01.github.io/Vlabs-NITK-2DOF-FORCED-VIBRATION/
