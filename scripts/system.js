@@ -91,9 +91,9 @@ class System  {
         let mu = obj.m1/obj.m2;
         let temp1 = x;
         let temp2 = Math.pow((obj.w/obj.w1),2);
-        let denom = ((1+mu)*temp2) +temp1;
+        let denom = ((1+mu)*temp2) + Math.pow(temp1,2);
         
-        let solution = (1-temp1) / ((temp1*temp2)-denom+1)
+        let solution = (1-Math.pow(temp1,2)) / ((Math.pow(temp1,2)*temp2)-denom+1)
         if (abs(solution)<200){
             return(abs(solution));
         }
@@ -106,9 +106,9 @@ class System  {
         let mu = obj.m1/obj.m2;
         let temp1 = x;
         let temp2 = Math.pow((obj.w/obj.w1),2);
-        let denom = ((1+mu)*temp2) +temp1;
+        let denom = ((1+mu)*temp2) +Math.pow(temp1,2);
         
-        let solution = (1)/ ((temp1*temp2)-denom+1);
+        let solution = (1)/ ((Math.pow(temp1,2)*temp2)-denom+1);
         if (abs(solution)<200){
             return(abs(solution));
         }
