@@ -29,7 +29,7 @@ let w;
 let F0;
 
 // factor
-let factor = 5;
+let factor = 10;
 
 // images
 let img;
@@ -66,7 +66,7 @@ function setup() {
     textFont("Comic Sans MS");
     
     createCanvas(width, height);
-    spring1 = new System(450, 425, 90, 25);
+    spring1 = new System(450, 365, 90, 25);
     
     position_graph1 = new Graph(50, 200, 100, 220, "x1", "t");
 
@@ -84,11 +84,11 @@ function setup() {
     m1 = new NumberInput(620, 290, "M1(kg)", 200, 500, 250, 10, true);
     k2 = new NumberInput(620, 340, "K2 (N/m)", 200, 1000, 500, 50, true);
     m2 = new NumberInput(620, 380, "M2(kg)", 10, 100, 50, 1, true);
-    button1 = new Button(645, 450, pause)
-    button2 = new Button(500, 150, graph)
-    button3 = new Button(500,110,back)
-    button4 = new Button(540, 150, graph)
-    button5 = new Button(500,110,back)
+    button1 = new Button(645, 430, pause)
+    button2 = new Button(705, 430, graph)
+    button3 = new Button(645,460,back)
+    button4 = new Button(705, 460, graph)
+    button5 = new Button(645,470,back)
     
 }
 

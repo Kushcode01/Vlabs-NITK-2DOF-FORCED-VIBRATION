@@ -50,8 +50,8 @@ class System  {
         //this.fi = atan((-2*this.z*this.w / this.wn) / (1 - (this.w*this.w)/(this.wn*this.wn)));
         
         
-        this.y1 = -(_mulfact*this.x1 * Math.sin(this.w1*t*10));
-        this.y2 = -(_mulfact*this.x2 * Math.sin(this.w2*t*10));
+        this.y2 = -(_mulfact*this.x1 * Math.sin(this.w1*t*10));
+        this.y1 = -(_mulfact*this.x2 * Math.sin(this.w2*t*10));
     }
 
     show(_stroke, _strockweight, _fill) {
@@ -61,13 +61,20 @@ class System  {
         let hei = spr.height-140;
 
         // spring
-        image(spr, this.x_equilibrium - (wid/2), this.y_equilibrium -12.5 -hei +this.y1 , wid, hei-this.y1);
+        image(spr, this.x_equilibrium - (wid/2), this.y_equilibrium -12.5 -hei +this.y1+10 , wid, hei-this.y1);
+        fill(0,0,0)
+        textSize(15)
+        text("K1",this.x_equilibrium - (wid/2)-30, this.y_equilibrium -12.5 -(hei/2) +this.y1+10)
         
-        image(spr, this.x_equilibrium -(wid/2), this.y_equilibrium -12.5-25 -(2*hei) +this.y1 +this.y2, wid, hei-this.y2)
+        image(spr, this.x_equilibrium -(wid/2), this.y_equilibrium -12.5-25 -(2*hei) +this.y1 +this.y2 +10, wid, hei-this.y2)
+        fill(0,0,0)
+        textSize(15)
+        text("K2",this.x_equilibrium -(wid/2)-30, this.y_equilibrium -12.5-25 -(1.5*hei) +this.y1 +this.y2 +10)
+
         // base
         rectMode(CENTER)
-        fill(255,0,0)
-        rect(this.x_equilibrium, this.y_equilibrium, this.width, this.h)
+        fill(0,0,0)
+        rect(this.x_equilibrium, this.y_equilibrium, this.width+40, this.h-20)
         
         // mass
         rect()
@@ -75,11 +82,17 @@ class System  {
         strokeWeight(_strockweight);
         fill(_fill);
         rectMode(CENTER)
-        fill(0,255,0);
-        rect(this.x_equilibrium ,this.y_equilibrium -(this.h/2) -hei +this.y1 -(this.h/2) , this.width, this.h)
+        fill(139,69,19);
+        rect(this.x_equilibrium ,this.y_equilibrium -(this.h/2) -hei +this.y1 -(this.h/2) +10, this.width-20, this.h)
+        fill(255,255,255)
+        textSize(12)
+        text("m1",this.x_equilibrium-5 ,this.y_equilibrium -(this.h/2) -hei +this.y1 -(this.h/2)+13)
         rectMode(CENTER)
-        fill(0,255,0);
-        rect(this.x_equilibrium ,this.y_equilibrium -50 -(2*hei) +this.y1 +this.y2 , this.width, this.h)
+        fill(139,69,19);
+        rect(this.x_equilibrium ,this.y_equilibrium -50 -(2*hei) +this.y1 +this.y2 +10, this.width-20, this.h)
+        fill(255,255,255);
+        textSize(12)
+        text("m2",this.x_equilibrium-5,this.y_equilibrium -50 -(2*hei) +this.y1 +this.y2+13)
 
         //fill(255,0,255);
         //rect(this.x_equilibrium - this.width/2, this.y_equilibrium + this.y2 +this.h+50, this.width, this.h)

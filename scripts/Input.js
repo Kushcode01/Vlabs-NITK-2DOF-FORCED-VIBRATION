@@ -22,7 +22,7 @@ class NumberInput {
             this.input1.position(this.x + this.w - 30, this.y - 20);
             if (this.ifSlider) {
                 this.input2 = createSlider(this.min, this.max, this.inp, this.change);
-                this.input2.size(this.w, 20);
+                this.input2.size(this.w, 15);
                 this.input2.position(this.x, this.y);
             }
             this.initialised = false;

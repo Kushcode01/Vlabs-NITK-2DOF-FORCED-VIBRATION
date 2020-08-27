@@ -25,13 +25,25 @@ class Graph {
 
     draw(r, g, b)  {
         push();
+        let temp_y=[]; 
+        
 
+        
         beginShape();
         stroke(r, g, b);
         strokeWeight(2);
         noFill();
         for (let i = 0; i < this.wave.length; i++) {
-            vertex(i + this.x, this.wave[i] + this.y);
+            if (this.wave[i]>400){
+                for (let i = 0; i < this.wave.length; i++) {
+            temp_y[i]= map(this.wave[i],0,max(this.wave), 0,this.h);
+            
+                }
+            vertex(i + this.x, temp_y[i] + this.y);
+            }
+            else{
+                vertex(i + this.x, this.wave[i] + this.y)
+            }
         }
         endShape();
 
@@ -47,7 +59,7 @@ class Graph {
         text(this.xLabel, this.x + this.w, this.y);
         translate(this.x, this.y)
         rotate(radians(-90))
-        text(this.yLabel, -this.h + 20, -10);
+        text(this.yLabel, 0 , -10);
 
         pop();
     }

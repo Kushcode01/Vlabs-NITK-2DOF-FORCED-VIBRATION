@@ -19,23 +19,27 @@ function runPage1() {
     spring1.show(0, 1, 0);
 
     position_graph1.update(spring1.y1);
-    position_graph1.draw(0, 0, 255)
+    position_graph1.draw(255, 0,0)
 
     position_graph2.update(spring1.y2);
-    position_graph2.draw(0, 0, 255)
+    position_graph2.draw(255, 0, 0)
 
     strokeWeight(0)
 
-    textSize(12);
+    textSize(15);
+    fill(230,154,42);
     text('w1 = ' + spring1.w1.toFixed(4) + " rad/s", 310, 520);
     text('w2 = ' + spring1.w2.toFixed(4) + " rad/s", 430, 520);
     text('w/w2 = ' + (spring1.w/spring1.w2).toFixed(4) + " rad/s", 310, 480)
+    strokeWeight(0.5);    
+    line(0, 440, 600, 440)
+    line(300,440,300,580)
 
     //text('η = ' + (slider_ang_freq.inp / spring1.wn).toFixed(4), 310, 535);
     //text('z = ' + z.inp.toFixed(4), 310, 550);
-
+    fill(0,0,0)
     textSize(20);
-    text("FORCED VIBRATION SYSTEM", 95, 110);
+    text("FORCED VIBRATION SYSTEM", 115, 110);
 
     F0.draw();
     w.draw();
