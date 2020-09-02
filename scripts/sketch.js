@@ -78,12 +78,12 @@ function setup() {
     //magFac = new DynamicGraph(125, 325, 230, 290, "Magnification Factor", "n", 0, 2.5, 0, 7.5, System.mag_func);
     //phaseAng = new DynamicGraph(125, 495, 150, 290, "Phase Angle", "n", 0, 2.5, 0, 180, System.phase_func);
 
-    F0 = new NumberInput(620, 140, "F0(N)", 500, 1000, 750, 50, true);
-    w= new NumberInput(620, 190, "ω(rad/sec)", 0, 16, 5, 0.01, true);
-    k1 = new NumberInput(620, 240, "K1 (N/m)", 2000, 5000, 2500, 50, true);
-    m1 = new NumberInput(620, 290, "M1(kg)", 200, 500, 250, 10, true);
-    k2 = new NumberInput(620, 340, "K2 (N/m)", 200, 1000, 500, 50, true);
-    m2 = new NumberInput(620, 380, "M2(kg)", 10, 100, 50, 1, true);
+    F0 = new NumberInput(620, 140, "F0(N)", 500, 1000, 750, 50,1, true);
+    w= new NumberInput(620, 190, "ω(rad/sec)", 0, 16, 5, 0.01,0.01, true);
+    k1 = new NumberInput(620, 240, "K1 (N/m)", 2000, 5000, 2500, 50,1, true);
+    m1 = new NumberInput(620, 290, "M1(kg)", 200, 500, 250, 10,1, true);
+    k2 = new NumberInput(620, 340, "K2 (N/m)", 200, 1000, 500, 50,1, true);
+    m2 = new NumberInput(620, 380, "M2(kg)", 10, 100, 50, 1,0.1, true);
     button1 = new Button(645, 430, pause)
     button2 = new Button(705, 430, graph)
     button3 = new Button(645,460,back)

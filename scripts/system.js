@@ -38,6 +38,8 @@ class System  {
         
         this.w1 = Math.pow((this.term3 + this.det)/2,0.5);
         this.w2 = Math.pow((this.term3 - this.det)/2,0.5);
+
+
         
         //this.m = _m;
         //this.f = _force;
@@ -101,24 +103,30 @@ class System  {
     }
 
     static mag_func1(x, obj)  {
+
         let mu = obj.m1/obj.m2;
         let temp1 = x;
-        let temp2 = Math.pow((obj.w/obj.w1),2);
+        let temp2 = Math.pow(((obj.w2*x)/obj.w1),2);
         let denom = ((1+mu)*temp2) + Math.pow(temp1,2);
         
         let solution = (1-Math.pow(temp1,2)) / ((Math.pow(temp1,2)*temp2)-denom+1)
+            //let temp1= 1-(Math.pow((obj.w/obj.w1),2));
+            //let temp2 = Math.pow(obj.w1,2)-Math.pow(obj.w,2);
+            //let temp3 = Math.pow((obj.w/x),2)-Math.pow(obj.w,2);
+            //let solution = temp1/(Math.pow((obj.w1*(obj.w/x)),2)*temp2*temp3);
         if (abs(solution)<200){
             return(abs(solution));
         }
         else{
             return (200);
         }
+         
         
     }
     static mag_func2(x, obj)  {
         let mu = obj.m1/obj.m2;
         let temp1 = x;
-        let temp2 = Math.pow((obj.w/obj.w1),2);
+        let temp2 = Math.pow(((obj.w2*x**x)/obj.w1),2);
         let denom = ((1+mu)*temp2) +Math.pow(temp1,2);
         
         let solution = (1)/ ((Math.pow(temp1,2)*temp2)-denom+1);
