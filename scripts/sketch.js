@@ -72,8 +72,8 @@ function setup() {
 
     position_graph2 = new Graph(50, 300, 100, 220, "x2", "t");
 
-    magFac1 = new DynamicGraph(50, 400, 300, 220, "X1/Xst", "w/w2",0,20,0,300, System.mag_func1);
-    magFac2 = new DynamicGraph(50, 400, 300, 220, "X2/Xst", "w/w2",0,20,0,300, System.mag_func2);
+    magFac1 = new DynamicGraph(50, 400, 300, 220, "X1/Xst", "ω/ω2",0,20,0,300, System.mag_func1);
+    magFac2 = new DynamicGraph(50, 400, 300, 220, "X2/Xst", "ω/ω2",0,20,0,300, System.mag_func2);
 
     //magFac = new DynamicGraph(125, 325, 230, 290, "Magnification Factor", "n", 0, 2.5, 0, 7.5, System.mag_func);
     //phaseAng = new DynamicGraph(125, 495, 150, 290, "Phase Angle", "n", 0, 2.5, 0, 180, System.phase_func);

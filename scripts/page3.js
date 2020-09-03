@@ -1,4 +1,4 @@
-function runPage3() {
+﻿function runPage3() {
     background(255);
     image(bg, 0, 0);
     
@@ -17,9 +17,10 @@ function runPage3() {
 
     textSize(15);
     fill(230,154,42);
-    text('w1 = ' + spring1.w1.toFixed(4) + " rad/s", 310, 520);
-    text('w2 = ' + spring1.w2.toFixed(4) + " rad/s", 450, 520);
-    text('w/w2 = ' + (spring1.w/spring1.w2).toFixed(4) + " rad/s", 310, 480)
+    strokeWeight(0);
+    text('ω1 = ' + spring1.w1.toFixed(4) + " rad/s", 310, 520);
+    text('ω2 = ' + spring1.w2.toFixed(4) + " rad/s", 450, 520);
+    text('ω/ω2 = ' + (spring1.w/spring1.w2).toFixed(4) + " rad/s", 310, 480)
     
     text('X2/Xst = ' + (abs(spring1.x2/(spring1.F0/spring1.k1))).toFixed(4) , 150, 480)
     text('X2 = ' + (abs(spring1.x2)).toFixed(4) , 150, 520)

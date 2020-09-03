@@ -28,9 +28,9 @@ function runPage1() {
 
     textSize(15);
     fill(230,154,42);
-    text('w1 = ' + spring1.w1.toFixed(4) + " rad/s", 310, 520);
-    text('w2 = ' + spring1.w2.toFixed(4) + " rad/s", 450, 520);
-    text('w/w2 = ' + (spring1.w/spring1.w2).toFixed(4) + " rad/s", 310, 480)
+    text('ω1 = ' + spring1.w1.toFixed(4) + " rad/s", 310, 520);
+    text('ω2 = ' + spring1.w2.toFixed(4) + " rad/s", 450, 520);
+    text('ω/ω2 = ' + (spring1.w/spring1.w2).toFixed(4) + " rad/s", 310, 480)
     strokeWeight(0.5);    
     line(0, 440, 600, 440)
     line(300,440,300,580)
