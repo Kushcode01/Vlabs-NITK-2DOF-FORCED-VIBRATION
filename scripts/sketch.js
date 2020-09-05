@@ -85,7 +85,7 @@ function setup() {
     k2 = new NumberInput(620, 340, "K2 (N/m)", 200, 1000, 500, 50,1, true);
     m2 = new NumberInput(620, 380, "M2(kg)", 10, 100, 50, 1,0.1, true);
     button1 = new Button(645, 430, pause)
-    button2 = new Button(705, 430, graph)
+    button2 = new Button(706, 430, graph)
     button3 = new Button(645,460,back)
     button4 = new Button(705, 460, graph)
     button5 = new Button(645,470,back)
