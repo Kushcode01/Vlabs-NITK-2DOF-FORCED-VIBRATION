@@ -30,8 +30,11 @@ initialise() {
 
             if (this.ifSlider) {
                 this.input2 = createSlider(this.min, this.max, this.inp, this.change);
-                this.input2.size(this.w, 20);
-                this.input2.position(this.x, this.y);
+                this.input2.size(this.w, 5);
+                this.input2.position(this.x, this.y+8);
+                this.input2.elt.style.position = "absolute";
+
+                this.input2.elt.setAttribute("class", "slider");
             }
             this.initialised = false;
         }
