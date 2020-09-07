@@ -53,12 +53,12 @@ let touch = false;
 let clear;
 
 function preload() {
-    play = loadImage("assets/icons/blueplaydull.png");
-    pause = loadImage("assets/icons/bluepausedull.png");
-    graph = loadImage("assets/icons/graphbutton.png");
-    back = loadImage("assets/icons/bluebkdulls.png");
-    bg = loadImage("assets/frame_copper_ver02.png");
-    spr = loadImage("assets/spring.png");
+    play = loadImage("images/blueplaydull.png");
+    pause = loadImage("images/bluepausedull.png");
+    graph = loadImage("images/graphbutton.png");
+    back = loadImage("images/bluebkdulls.png");
+    bg = loadImage("images/frame_copper_ver02.png");
+    spr = loadImage("images/spring.png");
     
 }
 

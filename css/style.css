@@ -42,7 +42,7 @@
     /* Set a specific slider handle width */
     height: 25px;
     /* Slider handle height */
-    background: transparent url(../assets/slider_handles.png) repeat-y 0 0;
+    background: transparent url(../images/slider_handles.png) repeat-y 0 0;
     /* Green background */
     cursor: pointer;
     /* Cursor on hover */
