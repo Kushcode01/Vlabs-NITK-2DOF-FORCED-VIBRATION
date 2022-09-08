@@ -3,4 +3,4 @@
 Under Simulator open the expr(for non flash users)
 
 Link:
-https://mdmv-nitk.vlabs.ac.in/exp7/index.html#
+https://mdmv-nitk.vlabs.ac.in/exp/exp-forced-vibration-nitk/simulation.html
